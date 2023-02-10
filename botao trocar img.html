@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Exercício 1 - Juliana 3A</title>
+	</head>
+    <body>
+        <img id="img" src="img/jujuba1.jpeg">
+        <button id="button" onclick="mudar()">trocar imagem</button>
+
+        <style type="text/css">
+			#img{
+				width: 200px;
+				height: 250px;
+			}
+
+			#jujuba2{
+				width: 200px;
+				height: 250px;
+			}
+         </style>
+
+		<script>
+            //Crie uma página HTML com um único botão que fique alterando a imagem
+            var i = 0
+            function mudar(){
+				if(i == 0){
+					document.getElementById("img").src = "img/jujuba1.jpeg"
+					i = 1
+				}
+				else{
+					document.getElementById("img").src = "img/jujuba2.jpeg"
+					i = 0
+				}
+			}
+		</script>
+	</body>
+</html>

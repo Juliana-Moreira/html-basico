@@ -1,0 +1,38 @@
+<!---a cor desejada deve ser informada em ingles ou em hexadecimal e o numero do paragrafo em "1","2" ou "3"-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - Juliana 3A</title>
+</head>
+<body>
+        <p id="p1">Esse é o primeiro parágrafo de texto do exercício 3 de DOM</p>
+		<p id="p2">Esse é o segundo parágrafo de texto do exercício 3 de DOM</p>
+		<p id="p3">Esse é o terceiro parágrafo de texto do exercício 3 de DOM</p>
+    <script>
+		//script que o usuário altere a cor desse texto e logo em seguida pergunte qual o paragrafo deve ficar nessa cor
+
+            var cor = prompt("Que cor deseja que o texto fique?")
+			var paragrafo = prompt("Qual paragrafo deseja que fique nessa cor?")
+
+			paragrafo = parseInt(paragrafo)
+
+			if(paragrafo == 1 || paragrafo == 2 || paragrafo == 3){
+				paragrafo = paragrafo.toString()
+				changeCorParagrafo()
+			}
+			else{
+				alert("Erro!")
+				location.reload()
+				exit()
+			}
+
+			function changeCorParagrafo(){
+				document.getElementById("p" + paragrafo).style.color=cor
+			}
+    </script>
+</body>
+</html>
